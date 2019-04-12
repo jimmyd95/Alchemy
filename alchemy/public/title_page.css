@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Light-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #EEEEEE;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.8em;
+  color: #5D6063;
+}
+
+h1{
+  line-height: 1.3em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.alchemy_title {
+  padding-top: 4em;
+  padding-bottom: 2em;
+  background-color:	#EEEEEE;
+}
+
+.alchemy_title h1 {
+  font-size: 150px;
+  text-align: center;
+  margin: 2em auto;
+}
+
+div a:link,
+div a:visited {
+  color: #414141;
+  text-decoration: none;
+}
+
+div a:hover,
+div a:visited:hover,
+div a:active,
+div a:visited:active {
+  color: #4f4f4f;
+}

@@ -1,0 +1,240 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Light-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #EEEEEE; /* rice white */
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.8em;
+  color: #888F95; /* light gray */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3em;
+  font-weight: normal;
+  font-style: normal;
+}
+
+a:link,
+a:visited {
+  color: #888F95; /* light gray  #5d6063; gray */
+  text-decoration: none;
+}
+
+a:hover,
+a:visited:hover,
+a:active,
+a:visited:active {
+  color: #54A5C4; /* teal */
+}
+
+/* drop down menu list */
+.menu-container{
+  /* position: fixed; */
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  padding: 50px;
+  background: #54575A; /* dark gray */
+}
+
+.menu{
+  margin-top: 15px;
+}
+
+.menu > li{
+  /* this allows the list to go inline instead of flexbos */
+  display: inline;
+  margin-right: 30px;
+}
+
+.menu > li:last-of-type{
+  /* this makes a margin between items and set the last one in order as well */
+  /* push the last one to the further right */
+  margin-right: 0;
+}
+
+.dropdown:hover .features-menu{ /* adding the .dropdown:hover, it will only
+   appear when user hovers the mouse over the feature item */
+  display: flex;
+  flex-direction: column; /* drop down */
+  background: #54575A; /* dark grey  #4b4d50 slightly darker gray */
+  border-radius: 5px;
+  padding-top: 60px;
+
+  position: absolute; /* this forces the submenue to be "invisible" so the
+   menu would function properly */
+  top: -25px;
+  left: -30px;
+}
+
+.features-menu{
+  display: none; /* this way it hides the submenu when not hovered */
+}
+
+.dropdown{
+  position: relative;  /* this allows the submenu to locate at the relative
+   position "feature" menu */
+}
+
+.dropdown > span{
+  z-index: 2; /* z-index basically makes the items into a 3D looking layout,
+   and the dropdown menu is going to be greater than the feature label in
+   <span> */
+  position: relative; /* makes the position related to the feature. only
+   positioned elements listen to z-line */
+  cursor: pointer; /* hover effect to display each items as a link */
+}
+
+.features-menu li{
+  list-style: none; /* clear out the style */
+  border-top: 1px solid #EEEEEE;
+
+  padding: 20px 40px 4px 30px; /* top right bottom left */
+  margin: 10px;
+}
+/* end of drop down menu list */
+
+/* the entirety of the content creations */
+.article-grid-container{
+  padding-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* the content that user has to upload. The main display */
+.sample-item {
+  display: flex;
+  padding-left: 2em;
+  justify-content: space-between;
+  /* solid and color is for testing purposes */
+  border-bottom: 1px solid #888F95; /* light gray */
+  width: 70em;
+  height: 200px;
+}
+
+/* Rating system */
+.rate {
+    float: left;
+    height: 46px;
+    padding: 4em;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc; /* space gray */
+}
+.rate:not(:checked) > label:before {
+    content: '◉ '; /* ★ */
+}
+.rate > input:checked ~ label {
+    color: #ffc700; /* yellow */
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217; /* dark yellow */
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08; /* brown yellow */
+}
+/* the end of the rating */
+
+
+/* set the image at the center of the flex box */
+.song-image{
+  padding-top: 5em;
+}
+
+.song > li{
+  /* this allows the list to go inline instead of flexbos */
+  display: grid;
+  padding: 0.9em;
+}
+
+/* the upload modifications */
+.upload-form{
+  width: 80%;
+  padding: 80px;
+  padding-left: 20em;
+  margin: 0 0 40px 0;
+}
+
+.form-row{
+  padding: 1em;
+  flex-direction: row;
+  align-items: flex-start; /* To avoid stretching */
+  text-align: justify;
+}
+
+/* texturing the desciption box */
+.form-row textarea{
+  /* font-family: "Roboto", "arial", sans-serif; */
+  border: 1px solid #d6d9dc; /* light gray */
+}
+
+.form-row input[type='text']{
+  background-color: #ffffff; /* white */
+  border: 1px solid #d6d9dc; /* very light gray */
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+
+  width: 250px;
+  height: initial;
+}
+
+/* the button textureing */
+.form-row button{
+  font-size: 16px;
+  font-weight: normal;
+
+  color: #EEEEEE; /* rice white */
+  background-color: #54575A; /* dark grey */
+
+  border: none;
+  border-radius: 3px;
+
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+/* button color */
+.form-row
+button:hover,
+button:active{
+  background-color: #888F95; /* light gray */
+}
+
+/* the footer */
+.footer-container{
+  padding: 5em;
+  background: #54575A; /* dark gray */
+  text-align: center;
+}

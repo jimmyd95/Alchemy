@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Light-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  color: #5D6063;
+  background-color: #EAEDF0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  padding-top: 10em;
+
+  /* Making the body a flex box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* This is establishing an empty stylesheet like the <div> container */
+ .login-form{
+   /* background-color: #F6F7F8; */
+   /* border: 1px solid #D6D9DC; */
+   border-radius: 3px;
+
+   width: 80%;
+   padding: 50px;
+   margin: 0 0 40px 0;
+ }
+
+.form-row{
+  flex-direction: row;
+  align-items: flex-start; /* To avoid stretching */
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form-row input[type='email']{
+  margin-left: 30px;
+}
+
+.form-row input[type='password']{
+  margin: 10px;
+}
+
+.form-row input[type='email'],
+.form-row input[type='password']{ /* input[type='text'] is attribute selector */
+/* only matches when the type attribute is text instead of radio buttons:
+ <input type='radio'/>  */
+  background-color: #ffffff; /* white */
+  border: 1px solid #d6d9dc; /* very light gray */
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+
+  width: 250px;
+  height: initial;
+}
+
+a:link,
+a:visited {
+  color: #888F95; /* light gray  #5d6063; gray */
+  text-decoration: none;
+}
+
+a:hover,
+a:visited:hover,
+a:active,
+a:visited:active {
+  color: #54A5C4; /* teal */
+}
+
+.recover > li{
+  display: inline;
+  padding: 1.8em;
+}
+
+.form-row button{
+  font-size: 16px;
+  font-weight: bold;
+
+  color: #EEEEEE; /* rice white */
+  background-color: #54575A; /* dark grey */
+
+  border: none;
+  border-radius: 3px;
+
+  padding: 10px 40px;
+  cursor: pointer;
+
+  justify-content: center;
+}
+
+.form-row
+button:hover,
+button:active{
+  background-color: #888F95; /* light gray */
+}
+
+.form-row input[type='email']:invalid,
+.form-row input[type='password']:invalid{
+  border: 1px solid #D55C5F;
+  color: #D55C5F;
+  box-shadow: none, /* useless in every other browser but Firefox. Remove
+   default red glow */
+}
+
+.main{
+  padding-top: 1em;
+}

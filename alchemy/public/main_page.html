@@ -1,0 +1,103 @@
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <title>Main Page</title>
+    <link rel='stylesheet' href='main_page.css'/>
+
+  </head>
+  <body>
+
+    <!-- nav menu -->
+    <header class="menu-container">
+        <div class="logo"><a href='main_page.html'>ALCHEMY</a></div>
+        <ul class="menu">
+            <li><a href='title_page.html'>Back Door</a></li>
+            <li class='dropdown'><span>Features &#9662;<!-- ▾ --></span>
+                <ul class='features-menu'>           <!-- Start of submenu -->
+                    <li><a href='#'>Harder</a></li>
+                    <li><a href='#'>Better</a></li>
+                </ul>
+            </li>
+            <li><a href='upload.html'>Upload</a></li>
+            <li><a href='login.html'>Login</a></li>
+        </ul>
+    </header>
+
+    <!-- Sample grid -->
+    <article class='article-grid-container'>
+            <div class='sample-item first-item'>
+                <!-- song image -->
+                <img class="song-image" src="#.jpg" alt="testing-only">
+
+                <!-- song rating -->
+                <div class="rate">
+                  <input type="radio" id="star5" name="rate" value="5" />
+                  <label for="star5" title="text">5 stars</label>
+                  <input type="radio" id="star4" name="rate" value="4" />
+                  <label for="star4" title="text">4 stars</label>
+                  <input type="radio" id="star3" name="rate" value="3" />
+                  <label for="star3" title="text">3 stars</label>
+                  <input type="radio" id="star2" name="rate" value="2" />
+                  <label for="star2" title="text">2 stars</label>
+                  <input type="radio" id="star1" name="rate" value="1" />
+                  <label for="star1" title="text">1 star</label>
+                </div>
+
+                <!-- button of choice -->
+                <ul class="song">
+                    <li>sample</li>
+                    <li>listen</li>
+                    <li>download</li>
+                </ul>
+            </div>
+            <div class='sample-item'>
+                <img class="song-image" src="#.jpg" alt="testing-only">
+                <ul class="song">
+                    <li>sample</li>
+                    <li>listen</li>
+                    <li>download</li>
+                </ul>
+            </div>
+            <div class='sample-item last-item'>
+                <img class="song-image" src="#.jpg" alt="testing-only">
+                <ul class="song">
+                    <li>sample</li>
+                    <li>listen</li>
+                    <li>download</li>
+                </ul>
+            </div>
+    </article>
+
+    <!-- song uploads -->
+    <form class="upload-form" action="" method="get">
+
+      <!-- user input song name -->
+      <div class="form-row">
+        <label for="song-name"><h3>Song name</h3></label>
+        <input id="song-name" type="text" name="song-name"/>
+      </div>
+
+      <!-- user description -->
+      <div class="form-row">
+        <label for="description"><h3>Description</h3></label>
+        <textarea name="name" rows="6" cols="90" id="description"
+         name="description" placeholder='tell us what it is!'/></textarea>
+      </div>
+
+      <!-- UPLOAD BUTTON -->
+      <div class="form-row">
+          <button>Upload</button>
+          <div class="main">
+              <a href='main_page.html'>cancel</a>
+          </div>
+      </div>
+
+    </form>
+
+    <!-- end of page -->
+    <footer class="footer-container">
+        <p class="copyright">&copy; Copy Right reserved to Jimmy Ding</p>
+    </footer>
+
+  </body>
+</html>
